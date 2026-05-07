@@ -2,29 +2,27 @@
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 20);
-});
+}, { passive: true });
 
-// Floating WhatsApp button: appears after scroll
+// Floating WA button (desktop only — mobile uses sticky bar)
 const waFloat = document.getElementById('wa-float');
 window.addEventListener('scroll', () => {
   waFloat.classList.toggle('visible', window.scrollY > 300);
-});
+}, { passive: true });
 
-// Mobile menu
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('nav');
+// Mobile sticky CTA: ocultar cuando el botón hero está visible
+const mobCta = document.getElementById('mob-cta');
+const heroCta = document.querySelector('.btn-wa--hero');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  nav.classList.toggle('open');
-});
-
-nav.querySelectorAll('.nav__link').forEach(link => {
-  link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    nav.classList.remove('open');
-  });
-});
+if (heroCta && mobCta) {
+  const heroObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      mobCta.style.transform = entry.isIntersecting ? 'translateY(100%)' : 'translateY(0)';
+      mobCta.style.opacity  = entry.isIntersecting ? '0' : '1';
+    });
+  }, { threshold: 0.5 });
+  heroObserver.observe(heroCta);
+}
 
 // FAQ accordion
 document.querySelectorAll('.faq__question').forEach(btn => {
@@ -50,18 +48,17 @@ const revealObserver = new IntersectionObserver(entries => {
       revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.1 });
 
-const revealSelectors = [
-  '.service__card', '.stat__card', '.step',
-  '.team__card', '.testimonial__card', '.faq__item',
-  '.pillar__card', '.feature__item'
-];
-
-revealSelectors.forEach(sel => {
+['.stat__card', '.step', '.team__card', '.testimonial__card', '.faq__item'].forEach(sel => {
   document.querySelectorAll(sel).forEach((el, i) => {
     el.classList.add('reveal');
     el.style.transitionDelay = `${i * 0.06}s`;
     revealObserver.observe(el);
   });
 });
+
+// Mob CTA transition setup
+if (mobCta) {
+  mobCta.style.transition = 'transform 0.3s ease, opacity 0.3s ease';
+}

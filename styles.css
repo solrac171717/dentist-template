@@ -26,13 +26,14 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 body {
   font-family: 'Inter', system-ui, sans-serif;
   color: var(--text);
   background: #fff;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
 a { text-decoration: none; color: inherit; }
@@ -561,7 +562,30 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================
-   RESPONSIVE
+   MOBILE STICKY CTA BAR
+   ============================================ */
+.mob-cta {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 998;
+  padding: 10px 16px 12px;
+  background: rgba(255,255,255,0.97);
+  backdrop-filter: blur(12px);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -6px 24px rgba(15,23,42,0.1);
+}
+.mob-cta__btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; background: var(--wa); color: #fff;
+  font-size: 1rem; font-weight: 700; font-family: inherit;
+  padding: 15px 20px; border-radius: 14px; border: none; cursor: pointer;
+  box-shadow: 0 4px 16px rgba(22,163,74,0.3);
+  transition: background 0.2s, transform 0.15s;
+  text-decoration: none;
+}
+.mob-cta__btn:active { background: var(--wa-dark); transform: scale(0.98); }
+
+/* ============================================
+   RESPONSIVE — TABLET 1024px
    ============================================ */
 @media (max-width: 1024px) {
   .stats__inner { grid-template-columns: 1fr; gap: 48px; }
@@ -570,32 +594,132 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
   .hero__badge-exp { right: -10px; }
 }
 
+/* ============================================
+   RESPONSIVE — TABLET 900px
+   ============================================ */
 @media (max-width: 900px) {
   .hero__inner { grid-template-columns: 1fr; }
   .hero__visual { display: none; }
-  .services__grid { grid-template-columns: repeat(2, 1fr); }
-  .steps { grid-template-columns: 1fr; }
-  .step__connector { transform: rotate(90deg); padding: 8px 0; }
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .step__connector { transform: rotate(90deg); padding: 4px 0; }
   .team__grid { grid-template-columns: repeat(2, 1fr); }
-  .testimonials__grid { grid-template-columns: 1fr; }
+  .testimonials__grid { grid-template-columns: 1fr; gap: 12px; }
   .testimonial__card--featured { transform: none; }
-  .faq__inner { grid-template-columns: 1fr; gap: 48px; }
-  .footer__inner { grid-template-columns: 1fr; gap: 36px; }
+  .faq__inner { grid-template-columns: 1fr; gap: 40px; }
+  .footer__inner { grid-template-columns: 1fr; gap: 32px; }
 }
 
-@media (max-width: 700px) {
-  .header__urgency p { display: none; }
-}
-
+/* ============================================
+   RESPONSIVE — MOBILE 640px (full mobile)
+   ============================================ */
 @media (max-width: 640px) {
-  .hero { padding: 52px 0 44px; }
-  .hero__title { font-size: 1.9rem; }
-  .btn-wa--hero { width: 100%; justify-content: center; }
-  .services__grid { grid-template-columns: 1fr; }
-  .team__grid { grid-template-columns: 1fr; }
-  .stats__grid { grid-template-columns: 1fr 1fr; }
-  .footer__links { grid-template-columns: repeat(2, 1fr); }
-  .footer__bottom__inner { flex-direction: column; text-align: center; }
-  .wa-float { width: 54px; height: 54px; bottom: 18px; right: 18px; }
-  .wa-float__tooltip { display: none; }
+
+  /* -- Base --------------------------------- */
+  .container { padding: 0 16px; }
+  body { padding-bottom: 76px; } /* espacio para sticky bar */
+
+  /* -- Header ------------------------------- */
+  .header__urgency { display: none; }
+  .header__inner { height: 56px; gap: 12px; }
+  .logo { font-size: 1.1rem; }
+  .logo__icon { width: 30px; height: 30px; }
+  .btn-wa--sm { padding: 9px 14px; font-size: 0.8rem; }
+
+  /* -- Hero --------------------------------- */
+  .hero { padding: 24px 0 36px; }
+  .hero__badge { font-size: 0.74rem; padding: 6px 11px; margin-bottom: 1rem; }
+  .hero__title { font-size: 1.85rem; line-height: 1.1; margin-bottom: 0.9rem; }
+  .hero__desc { font-size: 0.93rem; margin-bottom: 1.4rem; max-width: 100%; }
+  .hero__micro { display: none; }
+  .btn-wa--hero {
+    width: 100%; justify-content: center;
+    padding: 15px 20px; font-size: 0.97rem;
+  }
+  .hero__proof { margin-top: 1.4rem; padding-top: 1.1rem; }
+  .proof__text p { font-size: 0.79rem; }
+
+  /* -- Trust bar ---------------------------- */
+  .trust-bar { padding: 12px 0; }
+  .trust-bar .container {
+    flex-wrap: nowrap; overflow-x: auto; gap: 8px;
+    padding-right: 16px; scrollbar-width: none;
+  }
+  .trust-bar .container::-webkit-scrollbar { display: none; }
+  .trust-bar__label { display: none; }
+  .trust-logo { white-space: nowrap; flex-shrink: 0; font-size: 0.72rem; padding: 4px 10px; }
+
+  /* -- Stats -------------------------------- */
+  .stats { padding: 56px 0; }
+  .stats__inner { grid-template-columns: 1fr; gap: 32px; }
+  .stats__grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .stat__card { padding: 18px 14px; }
+  .stat__num { font-size: 2rem; }
+  .stat__lbl { font-size: 0.8rem; }
+  .stats__content .btn-wa--md { width: 100%; justify-content: center; }
+
+  /* -- How it works ------------------------- */
+  .how-it-works { padding: 56px 0; }
+  .how-it-works .section__header { margin-bottom: 1.75rem; }
+  .step { padding: 22px 18px 18px; }
+  .step__num-bg { font-size: 4.5rem; top: -6px; right: 10px; }
+  .step__icon-wrap { width: 46px; height: 46px; border-radius: 12px; margin-bottom: 0.9rem; }
+  .step__icon-wrap svg { width: 24px; height: 24px; }
+  .step h3 { font-size: 0.97rem; }
+  .step p { font-size: 0.84rem; }
+  .step__connector { padding: 2px 0; }
+  .how__cta .btn-wa--lg { width: 100%; justify-content: center; }
+
+  /* -- Team --------------------------------- */
+  .team { padding: 56px 0; }
+  .team__grid { grid-template-columns: 1fr; gap: 16px; }
+  .team__img img { height: 200px; }
+  .team__overlay { opacity: 1; } /* siempre visible en touch */
+  .team__info { padding: 16px; }
+
+  /* -- Testimonials ------------------------- */
+  .testimonials { padding: 56px 0; }
+  .testimonials__grid { grid-template-columns: 1fr; gap: 12px; }
+  .testimonial__card { padding: 20px; }
+  .testimonial__card--featured { transform: none; }
+
+  /* -- FAQ ---------------------------------- */
+  .faq { padding: 56px 0; }
+  .faq__inner { grid-template-columns: 1fr; gap: 32px; }
+  .faq__aside .btn-wa--md { width: 100%; justify-content: center; }
+  .faq__question { font-size: 0.87rem; padding: 15px 14px; }
+  .faq__answer p { padding: 0 14px 14px; font-size: 0.84rem; }
+
+  /* -- CTA section -------------------------- */
+  .cta-section { padding: 56px 0; }
+  .cta-section__content h2 { font-size: 1.75rem; }
+  .cta-section__content p { font-size: 0.9rem; }
+  .btn-wa--xl { width: 100%; justify-content: center; padding: 16px 20px; font-size: 1rem; }
+  .cta-section__trust { gap: 8px; }
+  .cta-trust__item { font-size: 0.84rem; }
+
+  /* -- Footer ------------------------------- */
+  .footer { padding: 44px 0 0; }
+  .footer__inner { grid-template-columns: 1fr; gap: 28px; padding-bottom: 32px; }
+  .footer__links { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .footer__bottom__inner { flex-direction: column; text-align: center; gap: 6px; }
+  .footer__col p { font-size: 0.81rem; }
+
+  /* -- Section headers ---------------------- */
+  .section__header { margin-bottom: 1.75rem; }
+  .section__title { font-size: 1.65rem; }
+  .section__sub { font-size: 0.92rem; }
+
+  /* -- Sticky CTA bar ----------------------- */
+  .mob-cta { display: block; }
+
+  /* -- Ocultar float en mobile (lo reemplaza sticky bar) */
+  .wa-float { display: none; }
+}
+
+/* Safe area para iPhones con notch */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  @media (max-width: 640px) {
+    .mob-cta { padding-bottom: calc(10px + env(safe-area-inset-bottom)); }
+    body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+  }
 }
