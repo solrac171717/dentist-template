@@ -635,8 +635,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
     width: 100%; justify-content: center;
     padding: 15px 20px; font-size: 0.97rem;
   }
-  .hero__proof { margin-top: 1.4rem; padding-top: 1.1rem; }
-  .proof__text p { font-size: 0.79rem; }
+  .hero__proof { margin-top: 1.4rem; padding-top: 1.1rem; flex-wrap: wrap; row-gap: 8px; }
+  .proof__avatars { flex-shrink: 0; }
+  .proof__text { min-width: 0; flex: 1; }
+  .proof__stars { font-size: 0.85rem; }
+  .proof__text p { font-size: 0.8rem; line-height: 1.4; white-space: normal; }
 
   /* -- Trust bar ---------------------------- */
   .trust-bar { padding: 12px 0; }
