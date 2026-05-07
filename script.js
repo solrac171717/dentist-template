@@ -4,6 +4,12 @@ window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 20);
 });
 
+// Floating WhatsApp button: appears after scroll
+const waFloat = document.getElementById('wa-float');
+window.addEventListener('scroll', () => {
+  waFloat.classList.toggle('visible', window.scrollY > 300);
+});
+
 // Mobile menu
 const hamburger = document.getElementById('hamburger');
 const nav = document.getElementById('nav');
@@ -25,12 +31,10 @@ document.querySelectorAll('.faq__question').forEach(btn => {
   btn.addEventListener('click', () => {
     const item = btn.closest('.faq__item');
     const isOpen = item.classList.contains('open');
-
-    document.querySelectorAll('.faq__item.open').forEach(open => {
-      open.classList.remove('open');
-      open.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
+    document.querySelectorAll('.faq__item.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.faq__question').setAttribute('aria-expanded', 'false');
     });
-
     if (!isOpen) {
       item.classList.add('open');
       btn.setAttribute('aria-expanded', 'true');
@@ -38,38 +42,26 @@ document.querySelectorAll('.faq__question').forEach(btn => {
   });
 });
 
-// Contact form toast
-const form = document.getElementById('contact-form');
-const toast = document.getElementById('toast');
-
-form.addEventListener('submit', e => {
-  e.preventDefault();
-  toast.classList.add('show');
-  form.reset();
-  setTimeout(() => toast.classList.remove('show'), 4000);
-});
-
-// Smooth reveal on scroll
-const observer = new IntersectionObserver(entries => {
+// Scroll reveal
+const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      observer.unobserve(entry.target);
+      entry.target.classList.add('visible');
+      revealObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.12 });
 
-const animTargets = [
-  '.pillar__card', '.service__card', '.feature__item',
-  '.step', '.team__card', '.testimonial__card', '.blog__card'
+const revealSelectors = [
+  '.service__card', '.stat__card', '.step',
+  '.team__card', '.testimonial__card', '.faq__item',
+  '.pillar__card', '.feature__item'
 ];
 
-animTargets.forEach(selector => {
-  document.querySelectorAll(selector).forEach((el, i) => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(24px)';
-    el.style.transition = `opacity 0.5s ease ${i * 0.07}s, transform 0.5s ease ${i * 0.07}s`;
-    observer.observe(el);
+revealSelectors.forEach(sel => {
+  document.querySelectorAll(sel).forEach((el, i) => {
+    el.classList.add('reveal');
+    el.style.transitionDelay = `${i * 0.06}s`;
+    revealObserver.observe(el);
   });
 });

@@ -3,32 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dentify — Clínica Dental</title>
+  <title>Dentify — Clínica Dental | Reserva por WhatsApp</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- BARRA DE URGENCIA -->
+  <div class="urgency-bar">
+    <span class="urgency-bar__dot"></span>
+    <p>🔥 Solo quedan <strong>4 citas disponibles</strong> esta semana — Agenda ahora antes de que se agoten</p>
+    <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita" class="urgency-bar__btn" target="_blank" rel="noopener">Reservar →</a>
+  </div>
 
   <!-- HEADER -->
   <header class="header" id="header">
     <div class="container header__inner">
       <a href="#" class="logo">
-        <span class="logo__icon">+</span>
+        <div class="logo__icon">
+          <svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
         <span class="logo__text">Dentify</span>
       </a>
 
       <nav class="nav" id="nav">
         <a href="#nosotros" class="nav__link">Nosotros</a>
         <a href="#servicios" class="nav__link">Servicios</a>
-        <a href="#blog" class="nav__link">Blog</a>
         <a href="#equipo" class="nav__link">Dentistas</a>
-        <a href="#contacto" class="nav__link">Contacto</a>
+        <a href="#testimonios" class="nav__link">Pacientes</a>
+        <a href="#faq" class="nav__link">FAQ</a>
       </nav>
 
       <div class="header__actions">
-        <a href="#contacto" class="btn btn--primary">Reservar cita</a>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Dentify" target="_blank" rel="noopener" class="btn-wa btn-wa--sm">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Reservar por WhatsApp
+        </a>
         <button class="hamburger" id="hamburger" aria-label="Menú">
           <span></span><span></span><span></span>
         </button>
@@ -37,98 +49,119 @@
   </header>
 
   <!-- HERO -->
-  <section class="hero">
+  <section class="hero" id="inicio">
+    <div class="hero__bg">
+      <div class="hero__orb hero__orb--1"></div>
+      <div class="hero__orb hero__orb--2"></div>
+      <div class="hero__orb hero__orb--3"></div>
+    </div>
     <div class="container hero__inner">
       <div class="hero__content">
-        <span class="hero__badge">Sonrisas saludables, vidas felices</span>
-        <h1 class="hero__title">Llevando sonrisas <em>más brillantes</em> a tu familia</h1>
-        <p class="hero__desc">Brindamos atención dental personalizada con tecnología de vanguardia para que tú y tu familia luzcan y se sientan mejor.</p>
-        <div class="hero__cta">
-          <a href="#contacto" class="btn btn--primary btn--lg">Reservar ahora</a>
-          <a href="tel:+1234567890" class="btn btn--ghost btn--lg">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            (123) 456-789
-          </a>
+        <div class="hero__badge">
+          <span class="badge__dot"></span>
+          Atendiendo hoy · Respuesta en minutos
         </div>
-        <div class="hero__trust">
-          <div class="trust__avatars">
-            <img src="https://i.pravatar.cc/40?img=1" alt="Paciente" />
-            <img src="https://i.pravatar.cc/40?img=2" alt="Paciente" />
-            <img src="https://i.pravatar.cc/40?img=3" alt="Paciente" />
+        <h1 class="hero__title">
+          La sonrisa que siempre<br/>
+          <span class="hero__title-gradient">quisiste tener</span><br/>
+          está a un mensaje
+        </h1>
+        <p class="hero__desc">
+          Reserva tu cita en segundos por WhatsApp. Sin formularios, sin esperas, sin complicaciones. Nuestro equipo te responde al instante.
+        </p>
+
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Dentify" target="_blank" rel="noopener" class="btn-wa btn-wa--hero">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Reservar cita por WhatsApp — Gratis
+          <span class="btn-wa__arrow">→</span>
+        </a>
+        <p class="hero__micro">Sin costo · Respuesta en menos de 5 min · Cancelación gratuita</p>
+
+        <div class="hero__proof">
+          <div class="proof__avatars">
+            <img src="https://i.pravatar.cc/36?img=1" alt="" />
+            <img src="https://i.pravatar.cc/36?img=2" alt="" />
+            <img src="https://i.pravatar.cc/36?img=3" alt="" />
+            <img src="https://i.pravatar.cc/36?img=4" alt="" />
           </div>
-          <p class="trust__text"><strong>500+</strong> pacientes satisfechos</p>
+          <div class="proof__text">
+            <div class="proof__stars">★★★★★</div>
+            <p><strong>500+ pacientes</strong> ya sonríen con nosotros</p>
+          </div>
         </div>
       </div>
-      <div class="hero__image">
+
+      <div class="hero__visual">
         <div class="hero__img-wrapper">
-          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80" alt="Dentista sonriente" />
-          <div class="hero__card hero__card--stat">
-            <span class="stat__number">98%</span>
-            <span class="stat__label">Satisfacción del paciente</span>
-          </div>
-          <div class="hero__card hero__card--exp">
-            <svg width="20" height="20" fill="none" stroke="#0EA5E9" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=640&q=85" alt="Dentista profesional" />
+          <div class="hero__glass-card hero__glass-card--top">
+            <div class="glass-icon glass-icon--green">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
             <div>
-              <span class="stat__number">10+</span>
-              <span class="stat__label">Años de experiencia</span>
+              <strong>Cita confirmada</strong>
+              <span>Hace 3 minutos por WhatsApp</span>
             </div>
           </div>
+          <div class="hero__glass-card hero__glass-card--bot">
+            <div class="hero__rating">
+              <span class="rating__stars">★★★★★</span>
+              <span class="rating__val">4.9</span>
+            </div>
+            <p>Calificación promedio de pacientes</p>
+          </div>
+          <div class="hero__badge-exp">
+            <span>10+</span>
+            <small>años</small>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PILARES -->
-  <section class="pillars" id="nosotros">
+  <!-- LOGOS / CONFIANZA -->
+  <section class="trust-bar">
     <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Nuestro compromiso</span>
-        <h2 class="section__title">Un compromiso con sonrisas <em>más saludables y brillantes</em></h2>
-      </div>
-      <div class="pillars__grid">
-        <div class="pillar__card">
-          <div class="pillar__icon pillar__icon--blue">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-          </div>
-          <h3>Atención personalizada</h3>
-          <p>Tratamientos diseñados específicamente para las necesidades y objetivos únicos de cada paciente.</p>
-        </div>
-        <div class="pillar__card">
-          <div class="pillar__icon pillar__icon--teal">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
-          </div>
-          <h3>Tecnología avanzada</h3>
-          <p>Equipos de diagnóstico y tratamiento de última generación para resultados precisos y cómodos.</p>
-        </div>
-        <div class="pillar__card">
-          <div class="pillar__icon pillar__icon--green">
-            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <h3>Un equipo que se preocupa</h3>
-          <p>Profesionales dentales compasivos y expertos dedicados a tu bienestar y comodidad.</p>
-        </div>
+      <p class="trust-bar__label">Avalados por</p>
+      <div class="trust-bar__logos">
+        <span class="trust-logo">ADA — American Dental Association</span>
+        <span class="trust-logo">ISO 9001 Certificado</span>
+        <span class="trust-logo">Colegio Oficial de Dentistas</span>
+        <span class="trust-logo">+500 Pacientes Satisfechos</span>
+        <span class="trust-logo">10 Años de Experiencia</span>
       </div>
     </div>
   </section>
 
-  <!-- ESTADÍSTICAS -->
-  <section class="stats">
-    <div class="container stats__grid">
-      <div class="stat__item">
-        <span class="stat__big">150+</span>
-        <span class="stat__desc">Sonrisas transformadas</span>
+  <!-- STATS -->
+  <section class="stats" id="nosotros">
+    <div class="container stats__inner">
+      <div class="stats__content">
+        <span class="section__tag">Números que hablan</span>
+        <h2 class="section__title">Una clínica con <em>resultados probados</em></h2>
+        <p class="section__sub">Más de una década cuidando sonrisas con tecnología de vanguardia y un equipo que realmente se preocupa por ti.</p>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20conocer%20m%C3%A1s%20sobre%20los%20servicios%20de%20Dentify" target="_blank" rel="noopener" class="btn-wa btn-wa--md">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Consultar gratis por WhatsApp
+        </a>
       </div>
-      <div class="stat__item">
-        <span class="stat__big">10+</span>
-        <span class="stat__desc">Años de experiencia</span>
-      </div>
-      <div class="stat__item">
-        <span class="stat__big">500+</span>
-        <span class="stat__desc">Pacientes satisfechos</span>
-      </div>
-      <div class="stat__item">
-        <span class="stat__big">98%</span>
-        <span class="stat__desc">Índice de satisfacción</span>
+      <div class="stats__grid">
+        <div class="stat__card">
+          <span class="stat__num">500<em>+</em></span>
+          <span class="stat__lbl">Pacientes felices</span>
+        </div>
+        <div class="stat__card">
+          <span class="stat__num">98<em>%</em></span>
+          <span class="stat__lbl">Satisfacción</span>
+        </div>
+        <div class="stat__card">
+          <span class="stat__num">10<em>+</em></span>
+          <span class="stat__lbl">Años de experiencia</span>
+        </div>
+        <div class="stat__card">
+          <span class="stat__num">150<em>+</em></span>
+          <span class="stat__lbl">Sonrisas transformadas</span>
+        </div>
       </div>
     </div>
   </section>
@@ -137,126 +170,103 @@
   <section class="services" id="servicios">
     <div class="container">
       <div class="section__header">
-        <span class="section__tag">Lo que ofrecemos</span>
-        <h2 class="section__title">Nuestros <em>servicios dentales</em></h2>
-        <p class="section__sub">Ofrecemos una gama completa de tratamientos para toda la familia, desde revisiones preventivas hasta transformaciones estéticas.</p>
+        <span class="section__tag">Nuestros tratamientos</span>
+        <h2 class="section__title">¿Qué necesitas <em>mejorar hoy?</em></h2>
+        <p class="section__sub">Cuéntanos por WhatsApp y te explicamos qué tratamiento es el más adecuado para ti, sin compromiso.</p>
       </div>
       <div class="services__grid">
 
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#0EA5E9" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Odontopediatr%C3%ADa" target="_blank" rel="noopener" class="service__card">
+          <div class="service__top">
+            <div class="service__icon" style="background:#EFF6FF">
+              <svg width="26" height="26" fill="none" stroke="#3B82F6" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M6 20v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.9</span>
           </div>
-          <div class="service__rating">★★★★★ <span>4.9</span></div>
           <h3>Odontopediatría</h3>
-          <p>Cuidado dental especializado y amigable para los más pequeños de la familia.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
-
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#EF4444" stroke-width="1.8" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <p>Cuidado dental especializado para los más pequeños, en un ambiente divertido y sin miedo.</p>
+          <div class="service__cta">
+            <span>Consultar por WhatsApp</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          <div class="service__rating">★★★★★ <span>4.8</span></div>
+        </a>
+
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20tengo%20una%20urgencia%20dental" target="_blank" rel="noopener" class="service__card service__card--urgent">
+          <div class="service__urgent-badge">Urgencias 24h</div>
+          <div class="service__top">
+            <div class="service__icon" style="background:#FEF2F2">
+              <svg width="26" height="26" fill="none" stroke="#EF4444" stroke-width="1.8" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.8</span>
+          </div>
           <h3>Urgencias dentales</h3>
-          <p>Atención inmediata ante emergencias como dolor agudo, fractura o pérdida de piezas.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
-
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#8B5CF6" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3h7l1 9 2-3 2 3 1-9h5M3 21h18"/></svg>
+          <p>¿Dolor agudo ahora mismo? Escríbenos y te atendemos hoy.</p>
+          <div class="service__cta">
+            <span>Escribir ahora</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          <div class="service__rating">★★★★★ <span>4.7</span></div>
+        </a>
+
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Ortodoncia" target="_blank" rel="noopener" class="service__card">
+          <div class="service__top">
+            <div class="service__icon" style="background:#F5F3FF">
+              <svg width="26" height="26" fill="none" stroke="#8B5CF6" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 3h7l1 9 2-3 2 3 1-9h5M3 21h18"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.7</span>
+          </div>
           <h3>Ortodoncia</h3>
-          <p>Brackets, alineadores transparentes y soluciones para una sonrisa perfectamente alineada.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
-
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#F59E0B" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <p>Brackets y alineadores invisibles para una sonrisa perfectamente alineada.</p>
+          <div class="service__cta">
+            <span>Consultar por WhatsApp</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          <div class="service__rating">★★★★★ <span>4.9</span></div>
+        </a>
+
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Est%C3%A9tica%20Dental" target="_blank" rel="noopener" class="service__card">
+          <div class="service__top">
+            <div class="service__icon" style="background:#FFFBEB">
+              <svg width="26" height="26" fill="none" stroke="#F59E0B" stroke-width="1.8" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.9</span>
+          </div>
           <h3>Estética dental</h3>
-          <p>Blanqueamiento, carillas y diseño de sonrisa para lucir tu mejor versión.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
-
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#10B981" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <p>Blanqueamiento, carillas y diseño de sonrisa para lucir radiante.</p>
+          <div class="service__cta">
+            <span>Consultar por WhatsApp</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </div>
-          <div class="service__rating">★★★★☆ <span>4.6</span></div>
-          <h3>Odontología restauradora</h3>
-          <p>Implantes, coronas y prótesis para recuperar la funcionalidad y estética de tu boca.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
+        </a>
 
-        <div class="service__card">
-          <div class="service__icon">
-            <svg width="32" height="32" fill="none" stroke="#0EA5E9" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Odontolog%C3%ADa%20Restauradora" target="_blank" rel="noopener" class="service__card">
+          <div class="service__top">
+            <div class="service__icon" style="background:#ECFDF5">
+              <svg width="26" height="26" fill="none" stroke="#10B981" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.6</span>
           </div>
-          <div class="service__rating">★★★★★ <span>4.5</span></div>
+          <h3>Implantes y restauración</h3>
+          <p>Implantes, coronas y prótesis para recuperar tu sonrisa completa.</p>
+          <div class="service__cta">
+            <span>Consultar por WhatsApp</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20interesa%20la%20Odontolog%C3%ADa%20Preventiva" target="_blank" rel="noopener" class="service__card">
+          <div class="service__top">
+            <div class="service__icon" style="background:#EFF6FF">
+              <svg width="26" height="26" fill="none" stroke="#0EA5E9" stroke-width="1.8" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0 1 12 2.944a11.955 11.955 0 0 1-8.618 3.04A12.02 12.02 0 0 0 3 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            </div>
+            <span class="service__badge">⭐ 4.5</span>
+          </div>
           <h3>Odontología preventiva</h3>
-          <p>Revisiones, limpiezas y sellados para mantener tu salud bucal en óptimas condiciones.</p>
-          <a href="#contacto" class="service__link">Saber más →</a>
-        </div>
+          <p>Revisiones, limpiezas y sellados para mantener tu salud bucal perfecta.</p>
+          <div class="service__cta">
+            <span>Consultar por WhatsApp</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- CARACTERÍSTICAS -->
-  <section class="features">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Por qué elegirnos</span>
-        <h2 class="section__title">Todo lo que necesitas <em>en un solo lugar</em></h2>
-      </div>
-      <div class="features__grid">
-        <div class="feature__item">
-          <div class="feature__dot"></div>
-          <div>
-            <h4>Cuidado preventivo</h4>
-            <p>Revisiones y limpiezas regulares para mantener tu sonrisa sana a largo plazo.</p>
-          </div>
-        </div>
-        <div class="feature__item">
-          <div class="feature__dot feature__dot--teal"></div>
-          <div>
-            <h4>Diagnóstico avanzado</h4>
-            <p>Equipos de última generación para diagnósticos precisos y no invasivos.</p>
-          </div>
-        </div>
-        <div class="feature__item">
-          <div class="feature__dot feature__dot--purple"></div>
-          <div>
-            <h4>Transformaciones estéticas</h4>
-            <p>Diseño de sonrisa personalizado que realza tu confianza y apariencia natural.</p>
-          </div>
-        </div>
-        <div class="feature__item">
-          <div class="feature__dot feature__dot--red"></div>
-          <div>
-            <h4>Atención de urgencias</h4>
-            <p>Disponibles para emergencias dentales cuando más nos necesitas.</p>
-          </div>
-        </div>
-        <div class="feature__item">
-          <div class="feature__dot feature__dot--amber"></div>
-          <div>
-            <h4>Planes personalizados</h4>
-            <p>Cada tratamiento es único y diseñado según tus objetivos y presupuesto.</p>
-          </div>
-        </div>
-        <div class="feature__item">
-          <div class="feature__dot feature__dot--green"></div>
-          <div>
-            <h4>Atención familiar integral</h4>
-            <p>Servicios completos para toda la familia en un ambiente cálido y acogedor.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -265,27 +275,40 @@
   <section class="how-it-works">
     <div class="container">
       <div class="section__header">
-        <span class="section__tag">Proceso simple</span>
-        <h2 class="section__title">Comenzar es <em>muy fácil</em></h2>
+        <span class="section__tag">Tan fácil como enviar un mensaje</span>
+        <h2 class="section__title">Tu nueva sonrisa en <em>3 simples pasos</em></h2>
       </div>
-      <div class="steps__grid">
+      <div class="steps">
         <div class="step">
-          <div class="step__number">01</div>
-          <h3>Agenda tu visita</h3>
-          <p>Reserva tu cita en línea o por teléfono en minutos, eligiendo el horario que mejor se adapte a ti.</p>
+          <div class="step__num">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          </div>
+          <div class="step__line"></div>
+          <h3>Escríbenos por WhatsApp</h3>
+          <p>Cuéntanos lo que necesitas. Te respondemos en menos de 5 minutos en horario de atención.</p>
         </div>
-        <div class="step__arrow">→</div>
         <div class="step">
-          <div class="step__number">02</div>
-          <h3>Consulta personalizada</h3>
-          <p>Nuestro equipo experto evaluará tu salud bucal y diseñará un plan de tratamiento a tu medida.</p>
+          <div class="step__num">
+            <svg width="28" height="28" fill="none" stroke="#0EA5E9" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="step__line"></div>
+          <h3>Elegimos juntos tu cita</h3>
+          <p>Te ofrecemos los horarios disponibles y confirmamos tu cita al instante, sin burocracia.</p>
         </div>
-        <div class="step__arrow">→</div>
         <div class="step">
-          <div class="step__number">03</div>
-          <h3>Inicia tu transformación</h3>
-          <p>Comienza tu tratamiento con la tranquilidad de estar en las mejores manos.</p>
+          <div class="step__num">
+            <svg width="28" height="28" fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="step__line step__line--hidden"></div>
+          <h3>¡Transforma tu sonrisa!</h3>
+          <p>Ven a tu cita y empieza el tratamiento. Cuidamos cada detalle para que tu experiencia sea perfecta.</p>
         </div>
+      </div>
+      <div class="how__cta">
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20quiero%20reservar%20una%20cita" target="_blank" rel="noopener" class="btn-wa btn-wa--lg">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Empezar ahora — es gratis
+        </a>
       </div>
     </div>
   </section>
@@ -295,31 +318,56 @@
     <div class="container">
       <div class="section__header">
         <span class="section__tag">Nuestros especialistas</span>
-        <h2 class="section__title">Conoce a nuestro <em>equipo dental</em></h2>
+        <h2 class="section__title">El equipo que <em>cuidará tu sonrisa</em></h2>
+        <p class="section__sub">Dentistas certificados, apasionados y comprometidos con tu bienestar en cada visita.</p>
       </div>
       <div class="team__grid">
         <div class="team__card">
-          <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=300&q=80" alt="Dra. Ana García" />
+          <div class="team__img">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&q=80" alt="Dra. Ana García" />
+            <div class="team__overlay">
+              <a href="https://wa.me/TUNUMERO?text=Hola%2C%20quisiera%20una%20cita%20con%20la%20Dra.%20Ana%20García" target="_blank" rel="noopener" class="team__wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                Pedir cita
+              </a>
+            </div>
+          </div>
           <div class="team__info">
             <h3>Dra. Ana García</h3>
-            <span>Directora / Ortodoncista</span>
-            <p>15 años de experiencia en ortodoncia y diseño de sonrisa.</p>
+            <span>Directora · Ortodoncista</span>
+            <p>15 años transformando sonrisas con ortodoncia invisible y diseño de sonrisa.</p>
           </div>
         </div>
         <div class="team__card">
-          <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=300&q=80" alt="Dr. Carlos Ruiz" />
+          <div class="team__img">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&q=80" alt="Dr. Carlos Ruiz" />
+            <div class="team__overlay">
+              <a href="https://wa.me/TUNUMERO?text=Hola%2C%20quisiera%20una%20cita%20con%20el%20Dr.%20Carlos%20Ruiz" target="_blank" rel="noopener" class="team__wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                Pedir cita
+              </a>
+            </div>
+          </div>
           <div class="team__info">
             <h3>Dr. Carlos Ruiz</h3>
-            <span>Implantología y Cirugía</span>
-            <p>Especialista en implantes dentales y cirugía oral con técnica mínimamente invasiva.</p>
+            <span>Implantología · Cirugía oral</span>
+            <p>Especialista en implantes con técnica mínimamente invasiva y alta tasa de éxito.</p>
           </div>
         </div>
         <div class="team__card">
-          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=300&q=80" alt="Dra. Laura Martínez" />
+          <div class="team__img">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&q=80" alt="Dra. Laura Martínez" />
+            <div class="team__overlay">
+              <a href="https://wa.me/TUNUMERO?text=Hola%2C%20quisiera%20una%20cita%20con%20la%20Dra.%20Laura%20Martínez" target="_blank" rel="noopener" class="team__wa">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+                Pedir cita
+              </a>
+            </div>
+          </div>
           <div class="team__info">
             <h3>Dra. Laura Martínez</h3>
             <span>Odontopediatra</span>
-            <p>Apasionada del cuidado dental infantil con enfoque lúdico y sin miedo.</p>
+            <p>Crea experiencias dentales positivas y sin miedo para niños desde la primera visita.</p>
           </div>
         </div>
       </div>
@@ -327,246 +375,139 @@
   </section>
 
   <!-- TESTIMONIOS -->
-  <section class="testimonials">
+  <section class="testimonials" id="testimonios">
     <div class="container">
       <div class="section__header">
-        <span class="section__tag">Lo que dicen nuestros pacientes</span>
-        <h2 class="section__title">Historias de <em>sonrisas reales</em></h2>
+        <span class="section__tag">Pacientes reales, resultados reales</span>
+        <h2 class="section__title">Lo que dicen quienes ya <em>confiaron en nosotros</em></h2>
       </div>
       <div class="testimonials__grid">
         <div class="testimonial__card">
-          <div class="testimonial__stars">★★★★★</div>
-          <p>"Servicio excepcional y comunicación muy clara. Me explicaron cada paso del tratamiento y el resultado superó mis expectativas."</p>
-          <div class="testimonial__author">
-            <img src="https://i.pravatar.cc/48?img=11" alt="Daniel Smith" />
+          <div class="testimonial__head">
+            <img src="https://i.pravatar.cc/52?img=11" alt="Daniel S." />
             <div>
-              <strong>Daniel Smith</strong>
-              <span>Paciente de ortodoncia</span>
+              <strong>Daniel S.</strong>
+              <span>Ortodoncia invisible</span>
             </div>
+            <div class="testimonial__stars">★★★★★</div>
           </div>
+          <p>"Reservé por WhatsApp un martes por la noche y al día siguiente tenía mi primera cita. El proceso fue increíblemente fácil y el resultado, espectacular."</p>
         </div>
         <div class="testimonial__card testimonial__card--featured">
-          <div class="testimonial__stars">★★★★★</div>
-          <p>"Profesionales, eficientes y orientados a resultados. La Dra. García transformó mi sonrisa de una manera que nunca imaginé posible."</p>
-          <div class="testimonial__author">
-            <img src="https://i.pravatar.cc/48?img=5" alt="Lisa Green" />
+          <div class="testimonial__head">
+            <img src="https://i.pravatar.cc/52?img=5" alt="Lisa G." />
             <div>
-              <strong>Lisa Green</strong>
+              <strong>Lisa G.</strong>
               <span>Diseño de sonrisa</span>
             </div>
+            <div class="testimonial__stars">★★★★★</div>
+          </div>
+          <p>"La Dra. García transformó mi sonrisa por completo. Nunca imaginé que reservar por WhatsApp fuera tan rápido. Me respondieron en 2 minutos y ahora tengo la sonrisa de mis sueños."</p>
+          <div class="testimonial__verified">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Paciente verificado
           </div>
         </div>
         <div class="testimonial__card">
-          <div class="testimonial__stars">★★★★★</div>
-          <p>"Atención rápida y efectiva. Fui por una urgencia y me atendieron de inmediato. El equipo es muy amable y profesional."</p>
-          <div class="testimonial__author">
-            <img src="https://i.pravatar.cc/48?img=15" alt="John Smith" />
+          <div class="testimonial__head">
+            <img src="https://i.pravatar.cc/52?img=15" alt="Carlos M." />
             <div>
-              <strong>John Smith</strong>
+              <strong>Carlos M.</strong>
               <span>Urgencia dental</span>
             </div>
+            <div class="testimonial__stars">★★★★★</div>
           </div>
+          <p>"Tenía un dolor horrible un domingo a las 8pm. Escribí al WhatsApp sin esperanza y me atendieron al día siguiente a primera hora. ¡Increíble servicio!"</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BLOG -->
-  <section class="blog" id="blog">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Artículos recientes</span>
-        <h2 class="section__title">Consejos para tu <em>salud bucal</em></h2>
-      </div>
-      <div class="blog__grid">
-        <article class="blog__card">
-          <div class="blog__img">
-            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=500&q=80" alt="Prevención de caries" />
-            <span class="blog__tag">Prevención</span>
-          </div>
-          <div class="blog__body">
-            <time>18 de diciembre, 2024</time>
-            <h3>Estrategias efectivas para prevenir las caries</h3>
-            <p>Descubre los hábitos diarios y técnicas profesionales que te ayudarán a mantener tus dientes libres de caries.</p>
-            <a href="#" class="blog__link">Leer artículo →</a>
-          </div>
-        </article>
-        <article class="blog__card">
-          <div class="blog__img">
-            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb172e0c7?w=500&q=80" alt="Implantes dentales" />
-            <span class="blog__tag">Restauración</span>
-          </div>
-          <div class="blog__body">
-            <time>15 de enero, 2025</time>
-            <h3>Por qué es importante reemplazar un diente perdido</h3>
-            <p>La pérdida de una pieza dental puede tener consecuencias más allá de la estética. Te explicamos todas las opciones disponibles.</p>
-            <a href="#" class="blog__link">Leer artículo →</a>
-          </div>
-        </article>
-        <article class="blog__card">
-          <div class="blog__img">
-            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&q=80" alt="Salud de encías" />
-            <span class="blog__tag">Bienestar</span>
-          </div>
-          <div class="blog__body">
-            <time>13 de enero, 2025</time>
-            <h3>La conexión entre la salud de las encías y el bienestar general</h3>
-            <p>Investigaciones recientes muestran el vínculo entre la salud bucal y enfermedades sistémicas como la diabetes o cardiopatías.</p>
-            <a href="#" class="blog__link">Leer artículo →</a>
-          </div>
-        </article>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="faq">
+  <section class="faq" id="faq">
     <div class="container faq__inner">
-      <div class="section__header section__header--left">
+      <div class="faq__aside">
         <span class="section__tag">Preguntas frecuentes</span>
-        <h2 class="section__title">¿Tienes <em>alguna duda?</em></h2>
-        <p class="section__sub">Si no encuentras la respuesta que buscas, no dudes en contactarnos directamente.</p>
-        <a href="#contacto" class="btn btn--primary" style="margin-top:1.5rem">Contáctanos</a>
+        <h2 class="section__title section__title--left">¿Tienes <em>dudas?</em> Te respondemos</h2>
+        <p class="section__sub section__sub--left">Si no encuentras tu respuesta aquí, escríbenos directamente y te contestamos al momento.</p>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20los%20servicios%20de%20Dentify" target="_blank" rel="noopener" class="btn-wa btn-wa--md" style="margin-top:2rem">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Preguntar por WhatsApp
+        </a>
       </div>
-      <div class="faq__list" id="faq-list">
-
+      <div class="faq__list">
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            ¿Con qué frecuencia debo visitar al dentista?
+            ¿Realmente puedo reservar por WhatsApp?
             <svg class="faq__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__answer">
-            <p>Recomendamos visitas de revisión y limpieza cada seis meses. Sin embargo, dependiendo de tu historial dental y salud bucal, tu dentista puede sugerir una frecuencia diferente.</p>
-          </div>
+          <div class="faq__answer"><p>Sí, 100%. Escríbenos al WhatsApp, cuéntanos qué necesitas y te confirmamos la cita al instante. Sin formularios, sin esperas interminables.</p></div>
         </div>
-
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            ¿Atienden urgencias dentales?
+            ¿Cuánto tardan en responder?
             <svg class="faq__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__answer">
-            <p>Sí, ofrecemos atención de urgencias. Llámanos y nuestro equipo hará todo lo posible para atenderte el mismo día y aliviar tu dolor o resolver el problema.</p>
-          </div>
+          <div class="faq__answer"><p>En horario de atención (Lun–Vie 8:00–20:00, Sáb 9:00–14:00) respondemos en menos de 5 minutos. Fuera del horario, te contestamos a primera hora del siguiente día hábil.</p></div>
         </div>
-
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            ¿Las radiografías dentales son seguras?
+            ¿Atienden urgencias el mismo día?
             <svg class="faq__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__answer">
-            <p>Las radiografías dentales modernas utilizan niveles muy bajos de radiación. Con los equipos digitales actuales, la exposición es mínima y los beneficios diagnósticos superan ampliamente cualquier riesgo.</p>
-          </div>
+          <div class="faq__answer"><p>Siempre que hay disponibilidad, intentamos atender urgencias el mismo día. Escríbenos con urgencia en el mensaje y lo gestionamos como prioridad.</p></div>
         </div>
-
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            ¿Qué debo hacer si tengo dolor de muelas?
+            ¿Con qué frecuencia debo ir al dentista?
             <svg class="faq__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__answer">
-            <p>Si tienes dolor de muelas, llámanos para una cita urgente. Mientras tanto, puedes tomar analgésicos de venta libre, aplicar frío en la zona externa y evitar alimentos muy calientes, fríos o duros.</p>
-          </div>
+          <div class="faq__answer"><p>Lo recomendado es una revisión y limpieza cada 6 meses. Pero si tienes alguna molestia antes, no esperes — escríbenos y te atendemos.</p></div>
         </div>
-
         <div class="faq__item">
           <button class="faq__question" aria-expanded="false">
-            ¿Ofrecen servicios de odontopediatría?
+            ¿Puedo cancelar o cambiar mi cita?
             <svg class="faq__icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
           </button>
-          <div class="faq__answer">
-            <p>Sí, contamos con especialistas en odontopediatría formados para crear una experiencia positiva y sin miedo para los niños, desde su primera visita hasta la adolescencia.</p>
-          </div>
+          <div class="faq__answer"><p>Por supuesto. Escríbenos por el mismo WhatsApp con al menos 24h de antelación y gestionamos el cambio sin coste alguno.</p></div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- CONTACTO -->
-  <section class="contact" id="contacto">
-    <div class="container">
-      <div class="section__header">
-        <span class="section__tag">Estamos aquí para ti</span>
-        <h2 class="section__title">Reserva tu cita <em>hoy mismo</em></h2>
-        <p class="section__sub">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas.</p>
-      </div>
-      <div class="contact__inner">
-        <form class="contact__form" id="contact-form">
-          <div class="form__row">
-            <div class="form__group">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" placeholder="Tu nombre" required />
-            </div>
-            <div class="form__group">
-              <label for="email">Correo electrónico</label>
-              <input type="email" id="email" placeholder="tu@email.com" required />
-            </div>
+  <!-- CTA FINAL -->
+  <section class="cta-section">
+    <div class="cta-section__bg">
+      <div class="cta-orb cta-orb--1"></div>
+      <div class="cta-orb cta-orb--2"></div>
+    </div>
+    <div class="container cta-section__inner">
+      <div class="cta-section__content">
+        <span class="cta-section__tag">¿A qué estás esperando?</span>
+        <h2>Tu sonrisa perfecta<br/>empieza <em>con un mensaje</em></h2>
+        <p>Miles de pacientes ya reservaron su cita por WhatsApp. Es el camino más rápido hacia la sonrisa que mereces.</p>
+        <div class="cta-section__trust">
+          <div class="cta-trust__item">
+            <svg width="18" height="18" fill="none" stroke="#25D366" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Respuesta en minutos
           </div>
-          <div class="form__row">
-            <div class="form__group">
-              <label for="telefono">Teléfono</label>
-              <input type="tel" id="telefono" placeholder="(123) 456-7890" />
-            </div>
-            <div class="form__group">
-              <label for="servicio">Servicio de interés</label>
-              <select id="servicio">
-                <option value="">Selecciona un servicio</option>
-                <option>Odontopediatría</option>
-                <option>Urgencias dentales</option>
-                <option>Ortodoncia</option>
-                <option>Estética dental</option>
-                <option>Odontología restauradora</option>
-                <option>Odontología preventiva</option>
-              </select>
-            </div>
+          <div class="cta-trust__item">
+            <svg width="18" height="18" fill="none" stroke="#25D366" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Sin formularios ni esperas
           </div>
-          <div class="form__group">
-            <label for="mensaje">Mensaje (opcional)</label>
-            <textarea id="mensaje" rows="4" placeholder="Cuéntanos cómo podemos ayudarte..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--primary btn--full">Enviar solicitud de cita</button>
-          <p class="form__note">Al enviar, aceptas nuestra política de privacidad. Te contactaremos pronto.</p>
-        </form>
-
-        <div class="contact__info">
-          <div class="contact__locations">
-            <div class="location">
-              <div class="location__icon">
-                <svg width="20" height="20" fill="none" stroke="#0EA5E9" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <strong>Nueva York</strong>
-                <p>123 Smile Street, Suite 101<br/>New York, NY 10001</p>
-              </div>
-            </div>
-            <div class="location">
-              <div class="location__icon">
-                <svg width="20" height="20" fill="none" stroke="#0EA5E9" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-              </div>
-              <div>
-                <strong>Los Ángeles</strong>
-                <p>456 Bright Avenue, Building B<br/>Los Angeles, CA 90012</p>
-              </div>
-            </div>
-            <div class="location">
-              <div class="location__icon">
-                <svg width="20" height="20" fill="none" stroke="#0EA5E9" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.61 4.44 2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.09 6.09l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </div>
-              <div>
-                <strong>Teléfono</strong>
-                <p>(123) 456-789</p>
-              </div>
-            </div>
-          </div>
-          <div class="contact__hours">
-            <h4>Horario de atención</h4>
-            <div class="hours__row"><span>Lunes – Viernes</span><span>8:00 – 20:00</span></div>
-            <div class="hours__row"><span>Sábado</span><span>9:00 – 14:00</span></div>
-            <div class="hours__row"><span>Domingo</span><span>Cerrado</span></div>
+          <div class="cta-trust__item">
+            <svg width="18" height="18" fill="none" stroke="#25D366" stroke-width="2" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            Cancelación gratuita
           </div>
         </div>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Dentify" target="_blank" rel="noopener" class="btn-wa btn-wa--xl">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Reservar mi cita ahora
+        </a>
+        <p class="cta-section__note">Solo quedan <strong>4 citas disponibles</strong> esta semana</p>
+      </div>
+      <div class="cta-section__img">
+        <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=520&q=85" alt="Dentista feliz" />
       </div>
     </div>
   </section>
@@ -576,21 +517,14 @@
     <div class="container footer__inner">
       <div class="footer__brand">
         <a href="#" class="logo logo--white">
-          <span class="logo__icon">+</span>
+          <div class="logo__icon"><svg width="18" height="18" fill="none" stroke="#fff" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
           <span class="logo__text">Dentify</span>
         </a>
-        <p>Comprometidos con tu sonrisa y tu bienestar. Atención dental de excelencia para toda la familia.</p>
-        <div class="footer__social">
-          <a href="#" aria-label="Twitter">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-          </a>
-          <a href="#" aria-label="LinkedIn">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-          </a>
-          <a href="#" aria-label="Facebook">
-            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-        </div>
+        <p>Comprometidos con tu sonrisa. Atención dental de excelencia para toda la familia.</p>
+        <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita" target="_blank" rel="noopener" class="footer__wa">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+          Escríbenos al WhatsApp
+        </a>
       </div>
       <div class="footer__links">
         <div class="footer__col">
@@ -605,29 +539,33 @@
           <h5>Clínica</h5>
           <a href="#nosotros">Nosotros</a>
           <a href="#equipo">Nuestro equipo</a>
-          <a href="#blog">Blog</a>
-          <a href="#contacto">Contacto</a>
+          <a href="#testimonios">Pacientes</a>
+          <a href="#faq">FAQ</a>
         </div>
         <div class="footer__col">
-          <h5>Legal</h5>
-          <a href="#">Política de privacidad</a>
-          <a href="#">Términos de uso</a>
-          <a href="#">Política de cookies</a>
+          <h5>Contacto</h5>
+          <p style="color:#475569;font-size:.85rem;line-height:1.6">123 Smile Street<br/>New York, NY 10001<br/>Lun–Vie: 8:00–20:00<br/>Sáb: 9:00–14:00</p>
         </div>
       </div>
     </div>
     <div class="footer__bottom">
-      <div class="container">
+      <div class="container footer__bottom__inner">
         <p>© 2025 Dentify Clínica Dental. Todos los derechos reservados.</p>
+        <div class="footer__legal">
+          <a href="#">Privacidad</a>
+          <a href="#">Términos</a>
+          <a href="#">Cookies</a>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- Toast de éxito -->
-  <div class="toast" id="toast">
-    <svg width="20" height="20" fill="none" stroke="#10B981" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-    <span>¡Solicitud enviada! Nos pondremos en contacto contigo pronto.</span>
-  </div>
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/TUNUMERO?text=Hola%2C%20me%20gustar%C3%ADa%20reservar%20una%20cita%20en%20Dentify" target="_blank" rel="noopener" class="wa-float" id="wa-float" aria-label="Contactar por WhatsApp">
+    <div class="wa-float__pulse"></div>
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+    <span class="wa-float__tooltip">¡Reserva tu cita!</span>
+  </a>
 
   <script src="script.js"></script>
 </body>
