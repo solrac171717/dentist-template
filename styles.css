@@ -223,6 +223,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 
 .hero__rating { display: flex; align-items: baseline; gap: 5px; }
 .rating__stars { color: #FBBF24; font-size: 0.95rem; }
+.hero__glass-card .rating__stars { color: #FBBF24; } /* evita que sea sobreescrito por glass-card span */
 .rating__val { font-size: 1.25rem; font-weight: 900; color: var(--dark); }
 .hero__glass-card--bot p { font-size: 0.72rem; color: var(--muted); margin-top: 2px; }
 
@@ -415,21 +416,18 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 .testimonial__card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
 .testimonial__card--featured {
-  background: var(--dark); border-color: var(--dark);
   transform: translateY(-8px); box-shadow: var(--shadow-lg);
+  border-color: var(--blue);
 }
 .testimonial__card--featured:hover { transform: translateY(-12px); }
 
 .testimonial__head { display: flex; align-items: center; gap: 11px; margin-bottom: 14px; }
 .testimonial__head img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; flex-shrink: 0; }
 .testimonial__head strong { display: block; font-size: 0.88rem; font-weight: 700; color: var(--dark); }
-.testimonial__card--featured .testimonial__head strong { color: #fff; }
 .testimonial__head span { font-size: 0.76rem; color: var(--muted); }
-.testimonial__card--featured .testimonial__head span { color: #475569; }
 .testimonial__stars { margin-left: auto; font-size: 0.88rem; color: #FBBF24; }
 
 .testimonial__card p { font-size: 0.88rem; color: var(--text); line-height: 1.65; }
-.testimonial__card--featured p { color: #94A3B8; }
 
 .testimonial__verified {
   display: inline-flex; align-items: center; gap: 5px;
