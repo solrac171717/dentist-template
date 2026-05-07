@@ -136,7 +136,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
    ============================================ */
 .hero {
   background: #fff;
-  padding: 80px 0 64px;
+  padding: 36px 0 52px;
   border-bottom: 1px solid var(--border);
 }
 .hero__inner {
