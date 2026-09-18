@@ -1,0 +1,6 @@
+videogen/.venv/
+videogen/models/
+videogen/__pycache__/
+videogen/shot_top.png
+videogen/out/*
+!videogen/out/demo.mp4

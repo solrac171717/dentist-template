@@ -1,0 +1,144 @@
+{
+  "url": "https://rocketito.com",
+  "voice": "af_heart",
+  "speed": 1.0,
+  "gap": 0.45,
+  "blocks": [
+    {
+      "say": "This is Rocketito, an AI SEO agent that writes and publishes content for your business, so clients find you automatically.",
+      "actions": [
+        {
+          "at_word": "agent",
+          "do": "move",
+          "target": "h1",
+          "dur": 1.2
+        }
+      ]
+    },
+    {
+      "say": "Getting started is simple. Just type your website address here, and Rocketito analyzes it for free.",
+      "actions": [
+        {
+          "at_word": "type",
+          "do": "click",
+          "target": "input[placeholder='yourbusiness.com']",
+          "dur": 0.6
+        },
+        {
+          "at_word": "address",
+          "do": "type",
+          "target": "input[placeholder='yourbusiness.com']",
+          "text": "yourbusiness.com",
+          "dur": 1.4
+        },
+        {
+          "at_word": "analyzes",
+          "do": "move",
+          "target": "text=Analyze your website for Free",
+          "dur": 0.8
+        }
+      ]
+    },
+    {
+      "say": "Scroll down, and you can see how content gets published straight to your own website.",
+      "actions": [
+        {
+          "at_word": "scroll",
+          "do": "scroll",
+          "target": "h2:has-text('Automatically publish')",
+          "dur": 1.6
+        }
+      ]
+    },
+    {
+      "say": "Small businesses can now compete with global giants, and the before and after comparison makes the difference obvious.",
+      "actions": [
+        {
+          "at_word": "small",
+          "do": "scroll",
+          "target": "h2:has-text('Outranking Global Giants')",
+          "dur": 1.6
+        },
+        {
+          "at_word": "before",
+          "do": "scroll",
+          "target": "h2:has-text('Before & After')",
+          "dur": 1.6
+        }
+      ]
+    },
+    {
+      "say": "It takes just three steps. Add your website, get your strategy, and start climbing the rankings.",
+      "actions": [
+        {
+          "at_word": "three",
+          "do": "scroll",
+          "target": "h2:has-text('3 steps')",
+          "dur": 1.5
+        }
+      ]
+    },
+    {
+      "say": "You also get content that actually converts, written in more than sixty languages.",
+      "actions": [
+        {
+          "at_word": "content",
+          "do": "scroll",
+          "target": "h2:has-text('Content that converts')",
+          "dur": 1.4
+        },
+        {
+          "at_word": "written",
+          "do": "scroll",
+          "target": "h2:has-text('60+ languages')",
+          "dur": 1.4
+        }
+      ]
+    },
+    {
+      "say": "Pricing is simple. Pick monthly or annual, and start getting clients every month.",
+      "actions": [
+        {
+          "at_word": "pricing",
+          "do": "scroll",
+          "target": "h2:has-text('Choose your plan')",
+          "dur": 1.5
+        },
+        {
+          "at_word": "annual",
+          "do": "move",
+          "target": "h3:has-text('Annual')",
+          "dur": 0.9
+        }
+      ]
+    },
+    {
+      "say": "Have questions? The F A Q answers the most common ones, like how long until you see results.",
+      "actions": [
+        {
+          "at_word": "questions",
+          "do": "scroll",
+          "target": "h2:has-text('Frequently Asked')",
+          "dur": 1.5
+        },
+        {
+          "at_word": "long",
+          "do": "click",
+          "target": "h3:has-text('How long until I see results')",
+          "dur": 1.0
+        }
+      ]
+    },
+    {
+      "say": "That's Rocketito. Try the free analysis today.",
+      "actions": [
+        {
+          "at_word": "rocketito",
+          "do": "scroll",
+          "target": "h2:has-text('Ready to Get')",
+          "dur": 1.5
+        }
+      ]
+    }
+  ]
+}
